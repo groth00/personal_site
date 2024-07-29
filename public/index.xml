@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home</title>
+    <link>http://www.example.com/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookmarks</title>
+      <link>http://www.example.com/bookmarks/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/bookmarks/</guid>
+      <description>Here&amp;rsquo;s a list of tools, libraries, and learning materials (work in progress).&#xA;Interpreters and Compilers Link to heading [Crafting Interpreters by Robert Nystrom] (https://craftinginterpreters.com/contents.html) Programming Languages Link to heading Lua (Annotated) Mojo Nim Wren </description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://www.example.com/projects/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/projects/</guid>
+      <description>Go Web Forum&#xA;Tools: Go, PostgreSQL, htmx, Go&amp;rsquo;s html/template package, Bulma CSS&#xA;Designed and implemented a web forum allowing users to create posts and comments for topics CRUD operations for topics, posts, and comments; like, dislike, and save posts and comments Users register via a signup form then submit an activation token sent by email (SMTP) Hierarchical data modeling of comment chains using PostgreSQL Integrated with OpenTelemetry; instrumented HTTP handler functions to collect traces, metrics, and logs Middleware: CSRF protection, secure HTTP response headers, CORS, user authentication and access control Go Interpreter and Compiler</description>
+    </item>
+    <item>
+      <title>Reading List</title>
+      <link>http://www.example.com/reading/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/reading/</guid>
+      <description>Here&amp;rsquo;s a list of technical books that I&amp;rsquo;ve read and found helpful, lexicographically sorted.&#xA;C Link to heading Algorithms in C (Robert Sedgewick) Modern C (Jens Gustedt) Concurrency Link to heading The Little Book of Semaphores (Allen B. Downey) Using Asyncio in Python - Understanding Python&amp;rsquo;s Asynchronous Programming Features (Caleb Hattingh) Databases Link to heading Database Management Systems (Raghu Ramakrishnan and Johannes Gehrke) NoSQL Distilled - A Brief Guide to the Emerging World of Polyglot Persistence (Pramod J.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://www.example.com/about/</link>
+      <pubDate>Fri, 26 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/about/</guid>
+      <description>My background is in Statistics and I&amp;rsquo;m currently working as a Data Scientist.&#xA;I&amp;rsquo;m interested in software engineering and have been reading books and working on projects to get more experience.</description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>http://www.example.com/posts/post-1/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-1/</guid>
+      <description>Post 1!</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>http://www.example.com/posts/post-2/</link>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-2/</guid>
+      <description>Post 2!</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>http://www.example.com/posts/post-3/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-3/</guid>
+      <description>Post 3!</description>
+    </item>
+    <item>
+      <title>Post 4</title>
+      <link>http://www.example.com/posts/post-4/</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-4/</guid>
+      <description>Post 4!</description>
+    </item>
+    <item>
+      <title>Post 5</title>
+      <link>http://www.example.com/posts/post-5/</link>
+      <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-5/</guid>
+      <description>Post 5!</description>
+    </item>
+    <item>
+      <title>Post 6</title>
+      <link>http://www.example.com/posts/post-6/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-6/</guid>
+      <description>Post 6!</description>
+    </item>
+    <item>
+      <title>Post 7</title>
+      <link>http://www.example.com/posts/post-7/</link>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.example.com/posts/post-7/</guid>
+      <description>Post 7!</description>
+    </item>
+  </channel>
+</rss>

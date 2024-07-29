@@ -1,0 +1,51 @@
+baseurl = "http://www.example.com"
+title = "Home"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+paginate = 10
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+author = "Gabriel Roth"
+info = "Data Scientist"
+description = "Gabe's personal website"
+keywords = "blog,developer,personal"
+
+since = 2024
+
+colorScheme = "auto"
+hidecolorschemetoggle = false
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+# Social links
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/groth00/"
+
+# Menu links
+[[menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+[[menu.main]]
+name = "Projects"
+url = "projects/"
+weight = 2
+[[menu.main]]
+name = "Reading List"
+weight = 4
+url = "reading/"
+[[menu.main]]
+name = "Bookmarks"
+weight = 5
+url = "bookmarks/"
