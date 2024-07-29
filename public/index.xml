@@ -13,7 +13,7 @@
       <link>http://www.example.com/bookmarks/</link>
       <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://www.example.com/bookmarks/</guid>
-      <description>Here&amp;rsquo;s a list of tools, libraries, and learning materials (work in progress).&#xA;Interpreters and Compilers Link to heading [Crafting Interpreters by Robert Nystrom] (https://craftinginterpreters.com/contents.html) Programming Languages Link to heading Lua (Annotated) Mojo Nim Wren </description>
+      <description>Here&amp;rsquo;s a list of tools, libraries, and learning materials (work in progress).&#xA;Go Link to heading Packages Link to heading alice (middleware chaining) Chi (HTTP router) Gin (HTTP framework) go-mail (email sender) go-playground/form (form decoding) go-sqlite3 godotenv (dotenv file loader) GORM (ORM) hey (HTTP load generator) httprouter Jaeger (tracing) OpenTelemetry pq (PostgreSQL driver) scs (HTTP session management) twirp (RPC framework from Twitch) Resources Link to heading awesome-go Build a Go Image - Docker Effective Go Fyne App Showcase Go Blog Go GUI Projects Go Language Specification Go Wiki: Books List of Go Books Practical Go: Real world advice for writing maintainable Go programs Interpreters and Compilers Link to heading Crafting Interpreters by Robert Nystrom Programming Languages Link to heading Lua (Annotated) Mojo Nim Wren </description>
     </item>
     <item>
       <title>Projects</title>
