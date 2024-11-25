@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
-  Post 1 · Home
+  File Servers · Home
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +13,28 @@
 
 
 <meta name="author" content="Gabriel Roth">
-<meta name="description" content="Post 1">
+<meta name="description" content="my experience with TFTP and FTP">
 <meta name="keywords" content="blog,developer,personal">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Post 1">
-  <meta name="twitter:description" content="Post 1">
+  <meta name="twitter:title" content="File Servers">
+  <meta name="twitter:description" content="my experience with TFTP and FTP">
 
-<meta property="og:url" content="http://www.example.com/posts/post-1/">
+<meta property="og:url" content="//localhost:1313/posts/post-1/">
   <meta property="og:site_name" content="Home">
-  <meta property="og:title" content="Post 1">
-  <meta property="og:description" content="Post 1">
+  <meta property="og:title" content="File Servers">
+  <meta property="og:description" content="my experience with TFTP and FTP">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-25T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-07-25T00:00:00+00:00">
+    <meta property="article:published_time" content="2024-11-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-25T00:00:00+00:00">
 
 
 
 
-<link rel="canonical" href="http://www.example.com/posts/post-1/">
+<link rel="canonical" href="//localhost:1313/posts/post-1/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -44,7 +44,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
@@ -54,7 +54,7 @@
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
   
 
 
@@ -102,7 +102,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://www.example.com/">
+    <a class="navigation-title" href="//localhost:1313/">
       Home
     </a>
     
@@ -116,6 +116,10 @@
           
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
             </li>
           
             <li class="navigation-item">
@@ -145,8 +149,8 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://www.example.com/posts/post-1/">
-              Post 1
+            <a class="title-link" href="//localhost:1313/posts/post-1/">
+              File Servers
             </a>
           </h1>
         </div>
@@ -154,13 +158,13 @@
           <div class="date">
             <span class="posted-on">
               <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2024-07-25T00:00:00Z">
-                July 25, 2024
+              <time datetime="2024-11-25T00:00:00Z">
+                November 25, 2024
               </time>
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              One-minute read
+              11-minute read
             </span>
           </div>
           
@@ -171,7 +175,70 @@
 
       <div class="post-content">
         
-        <p>Post 1!</p>
+        <h2 id="introduction">
+  Introduction
+  <a class="heading-link" href="#introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>According to my file modification dates, I&rsquo;ve spent a week trying to implement a TFTP server and an FTP server in scratch from Rust. I did it mainly for fun and to learn something, so I&rsquo;ll admit I didn&rsquo;t write any tests. It was also the first time I tried to do something without relying heavily on libaries, except for Tokio, as developing a runtime is obviously hard.</p>
+<p>To do this, I went to <a href="https://rfc-editor.org"  class="external-link" target="_blank" rel="noopener">RFC Editor</a>, used the keyword search, and found the RFCs with Internet Standard status. For TFTP, it&rsquo;s RFC 1350 and for FTP it&rsquo;s RFC 959.</p>
+<h2 id="tftp">
+  TFTP
+  <a class="heading-link" href="#tftp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>RFC 1350 is Revision 2 of TFTP, dated July 1992. RFC 1350 obsoletes RFC 783, which is also called Revision 2, as it obsoletes <a href="https://www.potaroo.net/ietf/html/ienindex.html"  class="external-link" target="_blank" rel="noopener">IEN (Internet Experiment Notes) 133</a>. It&rsquo;s a simple protocol built on top of UDP (commonly used port 69) that transfers packets of data in a lockstep fashion.</p>
+<p>More or less, the client sends a read request (RRQ), the server sends 512-byte blocks of data (DATA), the client sends an acknowledgement of that block (ACK), then this continues until the last data packet is sent. The last data packet will be less than 512 bytes, which signals the end of the transfer. It&rsquo;s also possible for a client to send a write request (WRQ), but this is considered unwise to support as the specification does not include any user authentication or security mechanisms (IEN 133 was published in January 1980, the Internet wasn&rsquo;t a large global network yet).</p>
+<p>TFTP is mainly used by devices to boot from a network, so we&rsquo;re talking about sending to and receiving from a remote node. I&rsquo;ll encourage you to download the RFC and read more about it since it&rsquo;s only 11 pages long, but I&rsquo;ll provide an overview.</p>
+<p>There are five types of packets, which are read request (RRQ), write request (WRQ), data (DATA), acknowledgement (ACK), and error (ERROR), which have the opcodes 1, 2, 3, 4, and 5 respectively.</p>
+<p>Let&rsquo;s assume the perspective of a client that is communicating with a server that only serves files. We first need to send a RRQ packet over the network (don&rsquo;t forget about big-endianness). The RRQ packet consists of a 2 byte opcode (which takes the value of 1 in this case) followed by the filename as a null-terminated string, followed by the mode as a null-terminated string. In Rust, you can use the <code>CString</code> or <code>CStr</code> types in combination with the <code>as_bytes_with_nul</code> or <code>to_bytes_with_nul</code> methods from the <code>std::ffi</code> module to handle the strings. Or you could push the null byte to a String, whatever works for you. The mode can take the values &ldquo;netascii&rdquo;, &ldquo;octet&rdquo;, or &ldquo;mail&rdquo;. Octet, or binary mode, is commonly used. Strictly speaking, octet mode means the server transfers file in it&rsquo;s own 8-bit format, but it would have to account for the client not using the same 8-bit format. It mentions the DEC-20, a 36-bit machine, which is no longer being produced, so let&rsquo;s not worry about it.</p>
+<p>Once the server receives the RRQ, parses it, and does have the file that the client wants, it sends DATA packets. DATA packets consist of the 2 byte opcode, the 2 byte block number, and n bytes of data (from 0 to 512). The block number starts at 1 and will increment for each successive block of data. Upon receiving the DATA packet, the client will send an ACK packet, which consists of the 2 byte opcode and the matching 2 byte block number. If the client sends an old block number or the packet gets lost, then it may timeout and re-transmit its last ACK or DATA packet, which indicates to the server that it should re-transmit the DATA packet.</p>
+<p>In the happy path, the client and server exchange DATA and ACK packets until the last DATA packet under 512 bytes is sent. After the client sends the final ACK, it may cease communication, though the spec encourages the client to wait in case in needs to re-transmit the final ACK (which will happen if the server sends the final DATA packet again). There are still a few couple edge cases, which you can read more about in Section 6, Normal Termination.</p>
+<p>It&rsquo;s possible that before or during the data transfer, an error occurs. For DATA packets sent by the server, the client may send an ERROR packet and for ACK packets send by the client, the server may send an ERROR packet. Of course, when the client sends the initial RRQ and the server doesn&rsquo;t have that file, it should also respond with an ERROR packet. The ERROR packet consists of the 2 byte opcode, 2 byte error code, and the null-terminated error message string. There are 8 error codes to choose from, such as &ldquo;Not defined, see error message (if any)&rdquo; to the classic &ldquo;File not found&rdquo;.</p>
+<p>I want to emphasize that even though this is considered a simple protocol, there are many edge cases and intricacies that I haven&rsquo;t covered in this wall of text or in my own implementation, which would be too embarrassing to share. This includes handling different modes, re-transmissions, and error handling.</p>
+<p>What I will say is that I was able to write a program to load a couple of files into memory, listen for UDP connections, and send blocks of data with light error handling along the way. For &ldquo;re-transmissions&rdquo;, I would simply send the block of data that comes after whatever block number the client sent. I made a mistake by forgetting to null-terminate the error message in the ERROR packet which really confused me for a while, but I eventually fixed it and swore to remember to use CString/CStr. And because UDP is the way it is, a little bit of work has to be done to save the client state (mainly remembering what file it requested).</p>
+<p>That&rsquo;s about it. Though this isn&rsquo;t the most exciting technology out there, I think it&rsquo;s a gentle way to read an RFC, figure out how to construct your packet, send it over the network, and think about what could go wrong and how to deal with those situations.</p>
+<h2 id="ftp">
+  FTP
+  <a class="heading-link" href="#ftp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I&rsquo;ll be honest, I was in way over my head and wasn&rsquo;t able to implement an FTP server, but I did try. I also read most of the RFC, so I&rsquo;ll just write about what I read. The protocol doesn&rsquo;t have trivial in its name, so obviously it&rsquo;s more complex (this has nothing to do with the fact that RFC 959 is 69 pages long, not to mention HTTP).</p>
+<p>Not only does FTP use TCP, but the client-server (or server-server when controlled by a client) communication requires 2 connections. These connections are known as the control and data connections. The server must use port 21 for the control connection and port 20 for the data connection. So let&rsquo;s talk about them.</p>
+<p>To get some terminology out of the way, both the client and server have a Protocol Interpreter (PI) and DTP (Data Transfer Process). The user PI initiates a connection with the server PI for the control connection, and the server DTP initiates a connection with the user DTP for the data connection. Now the server DTP initiating the connection with the client DTP is default behavior in what&rsquo;s called active mode, because the server reaches out to the client. However, the client can send the PASV command to get an address the server is <em>passively</em> listening on;  the client DTP then connects to the server DTP, which is called passive mode.</p>
+<p>With that out of the way, the FTP server control connection receives commands from the client, which are Telnet strings. Basically they are ASCII strings that are terminated with CRLF (Carriage Return, Line Feed). Note that there are significantly more commands listed in the spec and its extensions, but in the minimum implementation specified in section 5.1, MINIMUM IMPLEMENTATIONS, the server should support the following commands:</p>
+<ul>
+<li>USER</li>
+<li>QUIT</li>
+<li>PORT</li>
+<li>TYPE</li>
+<li>MODE</li>
+<li>STRU</li>
+<li>RETR</li>
+<li>STOR</li>
+<li>NOOP</li>
+</ul>
+<p>If you&rsquo;re wondering if the USER command authenticates a user, then the answer is maybe. It may be enough for servers that combine the user identity with some form of access control, but other servers may require the PASS command after the USER command is accepted. Note that the PASS command is not required for a minimum implementation. Even if the PASS command is supported and used, there is no encryption. Sorry, you&rsquo;ll have to look at RFC 2228 for security extensions.</p>
+<p>Each command may have required and optional arguments. For example, the USER command requires a string identifying the user (the username) while the PORT command requires a comma-delimited string in the form h1,h2,h3,h4,p1,p2 where h1,h2,h3,h4 is the 32-bit internet host address (h1 being the high order 8 bits), and p1,p2 is the 16-bit TCP port address.</p>
+<p>Let&rsquo;s go into a little more detail now. Commands are categorized as access control commands, transfer parameter commands, and FTP service commands. The USER and QUIT commands are access control commands, the PORT, TYPE, MODE, and STRU commands are transfer parameter commands, and RETR, STOR, and NOOP are FTP service commands.</p>
+<p>USER sets the user for the &ldquo;session&rdquo;. I use the word session because the client PI can actually send the USER command again, which resets currently supplied information and begins the login sequence again. This has the side effect of using the previous user information for file transfer that are already in-progress. However, beginning the login sequence again does not affect the transfer parameters.</p>
+<p>QUIT terminates a user and allows the server to close the control connection if there is no file transfer in progress. If there is, then the control connection remains open for the server to send a response before closing it.</p>
+<p>PORT allows the client to specify where the server DTP should send data (remember, the default is active mode so the server connects to the client). The specification states that it&rsquo;s not required to use this command because there are defaults for both the user and server data ports. In practice, firewalls or NAT necessitate that the client PI use the PASV command instead of PORT for the client to initiate the data connection.</p>
+<p>TYPE allows the client to set the representation type - A for ASCII, E for EBCDIC, I for Image, and L for local byte. ASCII and EBCDIC take optional second parameters N for Non-print, T for Telnet format effectors, and C for Carriage Control (ASA). Local byte takes a second parameter for byte size. ASCII Non-print is the default type.</p>
+<p>MODE allows the client to set the data transfer mode - S for Stream, B for Block, and C for Compressed. Stream is the default.</p>
+<p>STRU allows the client to set the file structure - F for File (no record structure), R (Record structure), and P (Page structure). The minimum implementations requires support for file and records. In a nutshell, while EOF is used to mark the end of files, EOR is used to mark the end of records in the record-structure, where records comprise a file.</p>
+<p>RETR allows the client to specify a pathname for a file to retrieve from the server. It causes the server DTP to transfer a copy of the file to the user DTP in active mode, or the other way around in passive mode.</p>
+<p>STOR causes the server DTP to accept data transferred from the client DTP and store the data at the server site (its filesystem). Files will be replaced if they already exist, or created if not.</p>
+<p>NOOP is a no-op, so it doesn&rsquo;t do anything. The server will send an OK reply.</p>
+<p>So the gist is that the client PI sends a command to the server PI, then the server PI will store/update state such as current user or transfer parameters, or it may talk to the server DTP to send data to the client, or the server DTP may wait for the client DTP to send it data before persisting it. To reiterate, there&rsquo;s many edge cases and small details that I haven&rsquo;t included here and the best way to learn about them is to read the spec, or by implementing a server. The spec includes much more information, such as BNF notation for command parameters, formats for reply codes, state ASCII diagrams for common scenarios, and more.</p>
+<p>That&rsquo;s as much as I&rsquo;ll explain for FTP. Obviously, I only scratched the surface with commands (there are more I didn&rsquo;t list above), but there&rsquo;s also the replies to those commands, and it will get more complicated when you have sequences of commands. Communication between the client PI, client DTP, server PI, and server DTP is another subject, though I think you get the general idea of establishing TCP connections between the PI and DTP processes. Entangled with these operations are the procedures around connection reuse and closing, retries, and error handling.</p>
+<p>Although I&rsquo;m not able to show off an FTP implementation, I hope you learned something new or found part of this post interesting, and thanks for reading!</p>
 
       </div>
 
@@ -215,7 +282,7 @@
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   
@@ -224,9 +291,6 @@
 
 
   
-  
-
-
 
   
 

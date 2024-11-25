@@ -1,8 +1,31 @@
 +++
 title = "Projects"
 description = "Projects"
-date = "2024-07-29"
+date = "2024-11-25"
 +++
+
+**WebSockets Price Ticker**  
+Tools: Rust (tokio-tungstenite), Javascript  
+
+- Implemented a WebSockets server in Rust that allows clients to receive product price updates on an interval
+- Used Javascript WebSockets API to connect to the server and render updates
+
+**Rust Fullstack TODO Application**  
+Tools: Rust (Leptos, Actix), TailwindCSS  
+
+- Used the SSR (Server-Side Rendering) capability of Leptos to create a full stack web application for managing a TODO list
+- Compiled a native Rust binary to run the Actix server to store effects of CRUD operations
+- Compiled a Wasm bundle to run in the browser
+
+**Polygot Microservices**  
+Tools: Go, Rust, PostgreSQL, Valkey (Redis), Docker, Kubernetes (k3d)
+
+- Implemented microservices for a games listing application
+- gRPC microservices for metadata and reviews were written in Go
+- A REST API for achievements was written in Rust (Actix-Web)
+- Used Valkey for read-aside and write-through caching
+- Used kustomize to templatize application, database, and cache services
+- Wrote integration tests for communication between services
 
 **Go Web Forum**  
 Tools: Go, PostgreSQL, htmx, Go's html/template package, Bulma CSS
@@ -18,7 +41,6 @@ Tools: Go, PostgreSQL, htmx, Go's html/template package, Bulma CSS
 References: Writing an Interpreter in Go & Writing a Compiler in Go (Thorsten Ball)  
 Tools: Go
 
-- Tools: Go
 - Implemented a lexer and Pratt parser
 - Implemented an evaluator for a tree-walking interpreter
 - Implemented a stack-based VM and bytecode compiler

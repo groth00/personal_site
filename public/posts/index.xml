@@ -2,60 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Home</title>
-    <link>http://www.example.com/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Home</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Post 1</title>
-      <link>http://www.example.com/posts/post-1/</link>
-      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-1/</guid>
-      <description>Post 1!</description>
-    </item>
-    <item>
-      <title>Post 2</title>
-      <link>http://www.example.com/posts/post-2/</link>
-      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-2/</guid>
-      <description>Post 2!</description>
-    </item>
-    <item>
-      <title>Post 3</title>
-      <link>http://www.example.com/posts/post-3/</link>
-      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-3/</guid>
-      <description>Post 3!</description>
-    </item>
-    <item>
-      <title>Post 4</title>
-      <link>http://www.example.com/posts/post-4/</link>
-      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-4/</guid>
-      <description>Post 4!</description>
-    </item>
-    <item>
-      <title>Post 5</title>
-      <link>http://www.example.com/posts/post-5/</link>
-      <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-5/</guid>
-      <description>Post 5!</description>
-    </item>
-    <item>
-      <title>Post 6</title>
-      <link>http://www.example.com/posts/post-6/</link>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-6/</guid>
-      <description>Post 6!</description>
-    </item>
-    <item>
-      <title>Post 7</title>
-      <link>http://www.example.com/posts/post-7/</link>
-      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://www.example.com/posts/post-7/</guid>
-      <description>Post 7!</description>
+      <title>File Servers</title>
+      <link>/posts/file-servers/</link>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/posts/file-servers/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;&#xA;  Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve spent a week trying to implement a TFTP server and an FTP server in Rust. I did it for fun and to learn, so I&amp;rsquo;ll admit I wasn&amp;rsquo;t behaving like a good developer and didn&amp;rsquo;t write tests. It was the first time I tried to do something without relying heavily on libaries (except for Tokio, as developing a runtime is really hard).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

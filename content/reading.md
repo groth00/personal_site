@@ -1,10 +1,10 @@
 +++
 title = "Reading List"
 description = "Technical materials"
-date = "2024-07-29"
+date = "2024-11-25"
 +++
 
-Here's a list of technical books that I've read and found helpful, lexicographically sorted.
+Here's a list of technical books that I've read and found helpful.
 
 ## C
 
@@ -15,6 +15,9 @@ Here's a list of technical books that I've read and found helpful, lexicographic
 
 - The Little Book of Semaphores (Allen B. Downey)
 - Using Asyncio in Python - Understanding Python's Asynchronous Programming Features (Caleb Hattingh)
+
+## Cryptography
+- Serious Cryptography, 2nd edition (Jean-Philippe Aumasson)
 
 ## Databases
 
@@ -33,6 +36,9 @@ Here's a list of technical books that I've read and found helpful, lexicographic
 
 - Docker Deep Dive - Zero to Docker in a Single Book (Nigel Poulton)
 
+## Kubernetes
+- Kubernetes Up and Running, 3rd edition (Brendan Burns, Joe Beda, Kelsey Hightower, Lachlan Evenson)
+
 ## Javascript
 
 - The Javascript Language (Ilya Kantor)
@@ -44,11 +50,16 @@ Here's a list of technical books that I've read and found helpful, lexicographic
 ## Go
 
 - Distributed Services with Go (Travis Jeffery)
+- Know Go - Generics (John Arundel)
 - Let's Go! (Alex Edwards)
 - Let's Go Further! (Alex Edwards)
+- Microservices with Go (Alexander Shuiskov)
 - Network Programming with Go (Adam Woodbeck)
 - Writing a Compiler in Go (Thorsten Ball)
 - Writing an Interpreter in Go (Thorsten Ball)
+
+## gRPC
+- gRPC Go for Professionals (Clement Jean)
 
 ## Infrastructure as Code
 
@@ -76,6 +87,7 @@ Here's a list of technical books that I've read and found helpful, lexicographic
 
 ## Rust
 
+- Command Line Rust (Ken Youens-Clark)
 - The Rust Programming Language (Steve Klabnik and Carol Nichols)
 - Rust Web Development (Bastian Gruber)
 

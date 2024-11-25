@@ -1,16 +1,15 @@
-baseurl = "http://www.example.com"
 title = "Home"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
-paginate = 10
+pagination.pagerSize = 10
 
 [markup.highlight]
 style = "github-dark"
 
 [params]
 author = "Gabriel Roth"
-info = "Data Scientist"
+info = "Software Engineer"
 description = "Gabe's personal website"
 keywords = "blog,developer,personal"
 
@@ -27,9 +26,14 @@ author = "authors"
 
 # Social links
 [[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 1
+url = "https://www.linkedin.com/in/gabriel-r-20a7a997/"
+[[params.social]]
 name = "Github"
 icon = "fa-brands fa-github fa-2x"
-weight = 1
+weight = 2
 url = "https://github.com/groth00/"
 
 # Menu links
@@ -38,9 +42,13 @@ name = "About"
 weight = 1
 url = "about/"
 [[menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
+[[menu.main]]
 name = "Projects"
 url = "projects/"
-weight = 2
+weight = 3
 [[menu.main]]
 name = "Reading List"
 weight = 4
